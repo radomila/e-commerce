@@ -1,4 +1,4 @@
-import Home from '../pages/Home.js';
+import Home from '../pages/Home/index.js';
 import Women from '../pages/Women.js';
 import Men from '../pages/Men.js';
 import Accessories from '../pages/Accessories.js';
