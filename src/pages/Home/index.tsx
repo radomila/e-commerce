@@ -23,13 +23,18 @@ export default function Home() {
 
   return (
     <Container>
-      {products.slice(0, 4).map((product: Product) => {
-        return (
-          <>
-            <Card product={product} />
-          </>
-        );
-      })}
+      {products
+        .sort(function (product1: Product, product2: Product) {
+          return product1.price - product2.price;
+        })
+        .slice(0, 4)
+        .map((product: Product) => {
+          return (
+            <>
+              <Card product={product} />
+            </>
+          );
+        })}
     </Container>
   );
 }
